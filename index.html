@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>كود عشوائي</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 100px; }
+        .code-box { font-size: 28px; padding: 20px; border: 2px solid #444; border-radius: 8px; display: inline-block; margin-top: 20px; }
+        button { padding: 10px 20px; font-size: 18px; margin-top: 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>الكود الخاص بك:</h1>
+    <div class="code-box" id="codeBox">اضغط على الزر</div>
+    <br>
+    <button onclick="generateCode()">كود جديد</button>
+
+    <script src="codes.js"></script>
+    <script>
+        function generateCode() {
+            const codeBox = document.getElementById('codeBox');
+            const randomIndex = Math.floor(Math.random() * codes.length);
+            codeBox.textContent = codes[randomIndex];
+        }
+    </script>
+</body>
+</html>
